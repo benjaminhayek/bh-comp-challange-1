@@ -1,0 +1,193 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  color: #fff;
+  margin-top: 1.5em;
+  margin-left: 1em;
+}
+
+p {
+  font-size: 1em;
+  color: #fff;
+  margin-top: .5em;
+  margin-left: 2em;
+  max-width: 315px;
+}
+
+.right {
+  background-image: url(images/kevin.jpg);
+  background-size: cover;
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 65% 35%;
+
+}
+
+.left {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(250px, auto);
+  grid-template-areas: 
+  "box1 box1 box2 "
+  "box3 box4 box5 "
+  "box6 box7 box8 ";
+}
+
+.box1 {
+    background-color: #2cb2b0;
+    grid-area: box1;
+}
+
+.box2 {
+    background-color: #83b293;
+    grid-area: box2;
+}
+
+.box3 {
+    background-color: #89b2aa;
+    grid-area: box3;
+}
+
+.box4 {
+    background-color: #b2ba71;
+    grid-area: box4;
+}
+.box5 {
+    background-color: #1aabb2;
+    grid-area: box5;
+}
+
+.box6 {
+    background-color: #66b2b2;
+    grid-area: box6;
+}
+
+.box7 {
+    background-color: #71a4b2;
+    grid-area: box7;
+}
+
+.box8 {
+    background-color: #71b2a2;
+    grid-area: box8;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.bone {
+  align-self: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: table-cell; 
+  vertical-align: middle;
+  margin-top: 3em;
+}
+
+.icon {
+  align-self: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: inline-block; 
+  vertical-align: middle;
+  margin-top: 1em;
+}
+
+.more {
+  float: right;
+  margin-right: 1em;
+}
+
+.btnright {
+  float: right;
+  margin-top: 20em;
+  margin-right: -3em;
+  opacity: .5;
+}
+
+.btnleft {
+  margin-top: 20em;
+  margin-left: 1em;
+  opacity: .5;
+}
+
+@media screen and (max-width: 875px) {
+  .wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+/*    height: 900px;*/
+  }
+  .left {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+  "box1 box2 "
+  "box3 box4"
+  "box5 box6 "
+  "box7 box8 ";
+  }
+  .right {
+    display: block;
+    background-size: cover;
+    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper{
+    display: grid;
+    grid-template-columns: 100%;
+/*    height: 900px;*/
+  }
+  .left {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+  "box1 box2 "
+  "box3 box4"
+  "box5 box6 "
+  "box7 box8 ";
+  }
+  .right {
+    display: block;
+    background-size: contain;
+    
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 900px;
+  }
+  .left {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+  "box1"
+  "box2"
+  "box3"
+  "box4"
+  "box5"
+  "box6"
+  "box7"
+  "box8";
+  }
+  .right {
+    display: block;
+    background-size: cover;
+    
+  }
+}
+
